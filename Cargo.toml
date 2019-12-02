@@ -1,0 +1,17 @@
+[package]
+name = "vinum"
+version = "0.1.0"
+description = "Fast and portable numerical library"
+readme = "README.md"
+categories = ["mathematics"]
+authors = ["Vine Systems"]
+edition = "2018"
+
+[dependencies]
+lair = "0.2"
+ndarray = "0.13"
+num-complex = "0.3"
+num-traits = "0.2"
+
+[dev-dependencies]
+approx = "0.3"
