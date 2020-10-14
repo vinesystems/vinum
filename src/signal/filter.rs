@@ -102,12 +102,7 @@ where
     assert!(!a.is_empty() || !b.is_empty());
     assert!(a[0] != A::zero());
 
-    let mut vf = if let Some(vi) = vi {
-        vi.to_vec()
-    } else {
-        Vec::new()
-    };
-
+    let mut vf = vi.map_or_else(Vec::new, |vi| vi.to_vec());
     let mut y = vec![A::zero(); x.len()];
 
     raw_filter(b, a, x, vi, &mut vf, &mut y);
