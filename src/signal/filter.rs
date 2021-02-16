@@ -46,14 +46,15 @@ where
 {
     let mut ext = vec![A::zero(); x.len() + edge * 2];
     for (ev, xv) in &mut ext[0..edge].iter_mut().zip(x[1..=edge].iter().rev()) {
-        *ev = x[0] * A::from(2.0).expect("float-to-float conversion") - *xv;
+        *ev = x[0] + x[0] - *xv;
     }
     ext[edge..edge + x.len()].clone_from_slice(&x);
     for (ev, xv) in &mut ext[edge + x.len()..]
         .iter_mut()
         .zip(x[x.len() - 1 - edge..x.len() - 1].iter().rev())
     {
-        *ev = x[x.len() - 1] * A::from(2.0).expect("float-to-float conversion") - *xv;
+        let last = x[x.len() - 1];
+        *ev = (last + last) - *xv;
     }
     ext
 }
