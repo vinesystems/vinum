@@ -8,7 +8,7 @@ authors = ["Vine Systems"]
 edition = "2018"
 
 [dependencies]
-lair = "0.4"
+lair = "0.5"
 ndarray = "0.15"
 num-complex = "0.4"
 num-traits = "0.2"
