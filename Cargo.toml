@@ -1,6 +1,6 @@
 [package]
 name = "vinum"
-version = "1.0.2"
+version = "1.0.3"
 description = "Fast and portable numerical library"
 readme = "README.md"
 categories = ["mathematics"]
@@ -8,10 +8,10 @@ authors = ["Vine Systems"]
 edition = "2018"
 
 [dependencies]
-lair = "0.5"
+lair = "0.6"
 ndarray = "0.15"
 num-complex = "0.4"
 num-traits = "0.2"
 
 [dev-dependencies]
-approx = "0.4"
+approx = "0.5"
