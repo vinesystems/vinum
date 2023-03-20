@@ -23,8 +23,7 @@ where
     let edge = ntaps * 3;
     if x.len() <= edge {
         return Err(InvalidInput::Shape(format!(
-            "`x` should have more than {} elements",
-            edge
+            "`x` should have more than {edge} elements"
         )));
     }
     let ext = odd_ext(x, edge);
