@@ -1,11 +1,12 @@
 //! Tools to design filters.
 
-use num_complex::Complex;
-use num_traits::{Float, FloatConst, NumAssign, One, Pow};
 use std::convert::TryFrom;
 use std::f64::consts::PI;
 use std::iter::Sum;
 use std::ops::{Mul, Neg};
+
+use num_complex::Complex;
+use num_traits::{Float, FloatConst, NumAssign, One, Pow};
 
 /// Designs a digital or analog Butterworth filter and returns the filter
 /// coefficients.

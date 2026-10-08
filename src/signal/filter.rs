@@ -2,10 +2,12 @@
 
 pub mod design;
 
-use crate::InvalidInput;
+use std::cmp::{max, Ordering};
+
 use lair::{Real, Scalar};
 use ndarray::{Array1, Array2};
-use std::cmp::{max, Ordering};
+
+use crate::InvalidInput;
 
 /// Applies a digital filter forward and backward to a signal.
 ///
@@ -288,7 +290,7 @@ mod test {
         assert!(zi
             .iter()
             .zip(
-                vec![
+                [
                     0.996_720_783_693_642_1,
                     -1.494_091_472_816_327,
                     1.284_122_676_031_658_2,
@@ -302,7 +304,7 @@ mod test {
         let (y, _) = super::lfilter(&b, &a, &x, Some(&zi));
         assert!(y
             .iter()
-            .zip(vec![1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0].iter(),)
+            .zip([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0].iter(),)
             .all(|(p, q)| abs_diff_eq!(*p, *q, epsilon = 1e-8)));
 
         let x = vec![0.5, 0.5, 0.5, 0.0, 0.0, 0.0, 0.0];
@@ -311,14 +313,14 @@ mod test {
         assert!(y
             .iter()
             .zip(
-                vec![
+                [
                     0.5,
                     0.5,
                     0.5,
                     0.498_360_39,
                     0.486_105_28,
                     0.443_993_89,
-                    0.355_052_41,
+                    0.355_052_41
                 ]
                 .iter(),
             )
