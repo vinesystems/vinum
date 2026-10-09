@@ -146,8 +146,8 @@ mod tests {
     use num_complex::{Complex32, Complex64};
 
     use super::{filtfilt, sosfilt};
-    use crate::signal::filter::design::butter;
     use crate::InvalidInput;
+    use crate::signal::filter::design::butter;
 
     fn assert_close(actual: &[f64], expected: &[f64], tolerance: f64) {
         assert_eq!(actual.len(), expected.len());

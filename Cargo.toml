@@ -5,7 +5,7 @@ description = "Fast and portable numerical library"
 readme = "README.md"
 categories = ["mathematics"]
 authors = ["Vine Systems"]
-edition = "2018"
+edition = "2024"
 
 [dependencies]
 lair = "0.6"
