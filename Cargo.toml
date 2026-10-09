@@ -1,6 +1,6 @@
 [package]
 name = "vinum"
-version = "1.0.3"
+version = "2.0.0"
 description = "Fast and portable numerical library"
 readme = "README.md"
 categories = ["mathematics"]
