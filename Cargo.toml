@@ -8,7 +8,7 @@ authors = ["Vine Systems"]
 edition = "2024"
 
 [dependencies]
-lair = "0.6"
+lair = "0.8"
 num-traits = "0.2"
 
 [dev-dependencies]
