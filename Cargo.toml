@@ -9,9 +9,7 @@ edition = "2018"
 
 [dependencies]
 lair = "0.6"
-ndarray = "0.15"
-num-complex = "0.4"
 num-traits = "0.2"
 
 [dev-dependencies]
-approx = "0.5"
+num-complex = "0.4"
